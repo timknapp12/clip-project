@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const sports = [
   { id: 'ab123aa', name: 'Baseball' },
@@ -18,7 +19,7 @@ class App extends Component {
     sports
   }
 
-  removeItem = (sport, i) => {
+  removeItem = (i) => {
     const updatedList = this.state.sports.slice();
     updatedList.splice(i, 1);
     if (updatedList.length < 1) {
@@ -39,20 +40,28 @@ class App extends Component {
   render() {
     const list = this.state.sports.map((sport, i) => {
       return (
-        <div className="App"
+        <div className=''
             key={i}
-            onClick={() => this.removeItem(sport, i)} >
-            {sport.name}
+            onClick={() => this.removeItem(i)} >
+            <div className='section-two__items' >{sport.name}</div>
         </div>
       );
     })
    return(
-     <div>
-       <div>
-         
-        </div><h1>Click on your least favorite sports below to delete them until you have three left</h1> 
-       {list}
-       <button type='' className=''onClick={() => this.resetList()} >RESET</button>
+     <div className='App' >
+       <div className='section-one'>
+          <h3>Click on your least favorite sports below to delete them until you have three left</h3> 
+        </div>
+        <div className='section-two' >
+          <ReactCSSTransitionGroup
+            transitionName="fade-out"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={700}>
+            {list}
+            
+          </ReactCSSTransitionGroup>
+        </div>
+        <button type='' className='section-three'onClick={() => this.resetList()} >RESET</button>
      </div> 
    )
   }
