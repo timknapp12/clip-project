@@ -11,10 +11,8 @@ INSTRUCTIONS FOR RUNNING THE ASSESMENT
 
     b - type 'git clone https://github.com/timknapp12/clip-project.git'
 
-    c - type 'code .'
+    c - type 'npm install --save'
 
-    d - type 'npm install --save'
-    
-    e - type 'npm start' (this should open the repo in a browser window)
+    d - type 'npm start' (this should open the repo in a browser window)
 
 4 - Click the items off the list untill your heart is content
