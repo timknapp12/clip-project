@@ -1,3 +1,6 @@
+:root {
+  --orange: #fc4c02
+}
 .App {
   background-image: url('https://lh3.googleusercontent.com/lGKxpYS4J49MypQFT7l7cDjLIVpz6gl03SVVBkQc_lA8OLTP9CP2llaIph_5oq1FHRV7H8AvtgxEXCY2S6ZmS7eVxSuZUubLyECU-HhRhjeNkiaJCqLPDjqjAEfluSfyeaDuQIo6mmDf1n8cgFqjUDSCU4mXlqhwRzwYcJc9vQ8iAiCJzNbcV4p_Yb4tnBySHfOoZKsnn-54cP7sKDVO78PELh-LipfxtAnBYaVAJaGrEsyeuHxeEa5lHnnhCa-tNQxtXzlaZIK0s9-QvU4OAi-vhwXE-hRVY8bP-qNRn3hwuCKfz6ZeUHS2nX8MUcyAvZlnth1N1WACudJ2jA8_7ZPvGl61RvmrPDJ5cwhS1HTUcneQGfYNlNVZErGB60O2YZ2vTxini_0Hh3uKB0qPlOzNa9Hm9nuVxSZP91TTbuB190Gh_vnROcwcofiW2_SiPJmPQIUf2Hc3lw-UYozDAi3ic-PwsEiuPxRe0JMOdcupFFZOkK9x0uDWbDuDVQ0KPQcgjTHpdk-8kN_-EhIb5ucTqTVg864XkoIniilvX_ekyo952l0sBIVZmmn2IupbZ2_GUjCLc67dfVGqI34TY6-SojwRafVUNiGoxElZ=w901-h659-no');
   background-position: center center;
@@ -15,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fc4c02;
+  color: var(--orange);
 }
 
 .section-two {
@@ -25,7 +28,7 @@
 }
 
 .section-two__items {
-  background-color: #fc4c02;
+  background-color: var(--orange);
   animation: fade 1s ease-in-out;
   width: 19%;
   height: 23px;
@@ -42,7 +45,7 @@
 .section-three  {
   width: 6em;
   margin-left: 71.5em;
-  color: #fc4c02;
+  color: var(--orange);
 }
 
 @keyframes fade {

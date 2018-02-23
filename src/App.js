@@ -31,10 +31,6 @@ class App extends Component {
   resetList = () => {
     this.setState({sports: sports})
   }
-
-  componentDidMount = () => {
-    console.log(this.state)
-  }
   
 
   render() {
