@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Modal from './Modal';
 
 const sports = [
   { id: 'ab123aa', name: 'Baseball' },
@@ -23,7 +24,7 @@ class App extends Component {
     const updatedList = this.state.sports.slice();
     updatedList.splice(i, 1);
     if (updatedList.length < 1) {
-      alert ('Oh no, you deleted all the sports :(');
+      // alert ('Oh no, you deleted all the sports :(');
     }
     this.setState({ sports: updatedList })
   }
@@ -58,6 +59,8 @@ class App extends Component {
           </ReactCSSTransitionGroup>
         </div>
         <button type='' className='section-three'onClick={() => this.resetList()} >RESET</button>
+        <Modal
+        sports={this.state.sports}/>
      </div> 
    )
   }
